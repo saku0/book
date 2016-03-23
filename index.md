@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## a heading
+## b heading
 
-Hello, world!
+Hello, [world](/sample/)!
 
