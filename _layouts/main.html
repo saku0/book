@@ -3,16 +3,16 @@ layout: default
 ---
 <div class="page-content">
 
-      {% for post in site.posts limit:1 %}
-        <h3>{{ post.title }}</h3>
-        {{ post.content }}
-      {% endfor %}
-      <br/>
-      {% if site.posts.size > -1 %}
-        Recent:<br/>
-        {% for post in site.posts offset:0 limit:2 %}
-          {{ post.date | date: "%d %B, %Y" }}: <a href='{{ post.url }}'>{{ post.title }}</a><br/>
-        {% endfor %}
-      {% endif %}
+  {% for post in site.posts limit:1 %}
+    <h3>{{ post.title }}</h3>
+    {{ post.content }}
+  {% endfor %}
+  <br/>
+  {% if site.posts.size > -1 %}
+    Recent:<br/>
+    {% for post in site.posts offset:0 limit:2 %}
+      {{ post.date | date: "%d %B, %Y" }}: <a href='{{ post.url }}'>{{ post.title }}</a><br/>
+    {% endfor %}
+  {% endif %}
 
 </div>
